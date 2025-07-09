@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Child in the Rief</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero / Carousel -->
+  <header>
+    <div class="carousel">
+      <div class="slides">
+       <img src="images/child1.jpg" class="slide active" alt="Children playing">
+<img src="images/child2.jpg" class="slide" alt="Child smiling">
+<img src="images/child3.jpg" class="slide" alt="Children in school">
+
+      </div>
+      <div class="carousel-text">
+        <h2>Every Child Deserves a Future</h2>
+        <p>Join us in transforming lives, one child at a time.</p>
+        <a href="children.html" class="cta">Meet the Children</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mission -->
+  <section id="mission">
+    <h2>About the Mission</h2>
+    <p>We support children in Kenya by providing education, nutrition, and hope. Through storytelling and sponsorship, we connect them with donors who care.</p>
+  </section>
+
+  <!-- Donation Form -->
+  <section id="donate">
+    <h2>Support Our Mission</h2>
+    <form id="donation-form">
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Email Address" required><br>
+      <input type="number" placeholder="Amount (KES)" required><br>
+      <button type="submit">Donate Now</button>
+    </form>
+    <p class="fake-note">* This is a demo. Real donation system coming soon.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 The Child in the Rief. All rights reserved.</p>
+  </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    setInterval(() => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+</html>
